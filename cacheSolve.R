@@ -1,11 +1,11 @@
-cacheSolve <- function(x, ...) {
-        m <- x$getsolve()
+cachemean <- function(x, ...) {
+        m <- x$getmean()
         if(!is.null(m)) {
                 message("getting cached data")
-                return(m)cache
+                return(m)
         }
         data <- x$get()
-        m <- solve(data, ...)
-        x$setsolve(m)
+        m <- mean(data, ...)
+        x$setmean(m)
         m
 }
